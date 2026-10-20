@@ -1,0 +1,159 @@
+h1 {
+  margin: 60px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  align-items: stretch;
+}
+
+.product-card {
+  background-color: wheat;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 50);
+  width: 220px;
+  margin: 15px;
+}
+
+.product-card img {
+  width: 100%;
+  max-width: 220px;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.product-card img:hover {
+  transform: scale(1.03);
+}
+
+.product-card p {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 4px 0;
+}
+
+.product-card .stara-cena{
+  font-size: 12px;
+  color: #777;
+  text-decoration: line-through;
+  margin: 0 0 8px;
+}
+
+.product-card button {
+  background-color: coral;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.product-card button:hover {
+  background-color: darkgoldenrod;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  transform: scale(1.05);
+}
+
+.product-card button:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.product-card .remove-button {
+  background-color: transparent;
+  color: crimson;
+  border: 2px solid crimson;
+}
+
+.product-card .heart-button {
+  background: transparent;
+  color: crimson;
+  font-size: 24px;
+  border: none;
+}
+
+.product-card .heart-button:hover {
+  color: firebrick;
+  background-color: transparent;
+  transform: none;
+}
+
+input[type="text"] {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+  padding: 13px 16px;
+  margin: 20px auto;
+  border: 2px solid gainsboro;
+  border-radius: 10px;
+  background-color: white;
+  color: dimgrey;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]::placeholder {
+  color: gray;
+}
+
+input[type="text"]:focus {
+  border-color: teal;
+  box-shadow: 0 0 0 4px rgba(37, 114, 87, 0.12);
+}
+
+#filtr, #sortowanie {
+  min-width: 180px;
+  margin-bottom: 20px;
+  padding: 11px 38px 11px 14px;
+  border: 1px solid gainsboro;
+  border-radius: 9px;
+  background-color: white;
+  color: teal;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+#filtr:hover, #sortowanie:hover {
+  border-color: teal;
+  background-color: white;
+}
+
+#filtr:focus, #sortowanie:focus {
+  border-color: teal;
+  box-shadow: 0 0 0 3px rgba(37, 114, 87, 0.15);
+}
+
+.liczba-produtkow {
+  color: dimgray;
+  font-weight: bold;
+}
+
+.wyczysc-filtry {
+  padding: 11px 18px;
+  margin: 20px;
+  border: none;
+  border-radius: 9px;
+  background-color: teal;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.wyczysc-filtry:hover {
+  background-color: darkcyan;
+  box-shadow: 0 4px 10px rgba(37, 114, 87, 0.2);
+  transform: translateY(-2px);
+}
